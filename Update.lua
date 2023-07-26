@@ -1,5 +1,15 @@
 rednet.open('right')
 
+local function execute(msg)
+    if msg == 'turn left' then
+        turtle.turnLeft()
+    else if msg == 'turn right' then
+        turtle.turnRight()
+    else if msg == 'id' then
+        print(os.getComputerID())
+    end
+end
+
 while true do
     local id, msg
 
@@ -12,7 +22,7 @@ while true do
         break
     else
         print(msg)
-        shell.run(msg)
+        execute(msg)
     end
 
     sleep()
