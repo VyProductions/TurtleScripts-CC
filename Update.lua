@@ -7,10 +7,10 @@ while true do
         id, msg = rednet.receive('INSTRUCT')
     until id
 
-    rednet.send(id, nil, 'INSTRUCT_RESPONSE')
-
     if msg.op == 'BREAK' then
         break
+    else
+        shell.run(msg.data)
     end
 end
 
