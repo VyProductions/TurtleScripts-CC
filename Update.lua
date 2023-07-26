@@ -4,6 +4,7 @@ while true do
     local id, msg
 
     repeat
+        print('Waiting for instruction.')
         id, msg = rednet.receive('INSTRUCT')
     until id
 
