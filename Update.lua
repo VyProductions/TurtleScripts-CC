@@ -14,6 +14,8 @@ while true do
         print(msg)
         shell.run(msg)
     end
+
+    sleep()
 end
 
 rednet.close('right')
